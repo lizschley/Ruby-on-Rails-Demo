@@ -17,9 +17,19 @@ div.diary_buttons {
   margin: 15px;
 }
 
-a.diary_btn {
-  margin: 15px;
+a.diary {
+  margin: 2px;
+  padding: 10px 15px 10px 15px;
   text-align: center;
+  display: inline-block;
+  font: 15px Arial;
+  text-decoration: none;
+  color:#17202A;
+}
+
+span.diary {
+  padding-top: 5px;
+  font: bold 20px Arial;
 }
 
 a.btn_edit {
