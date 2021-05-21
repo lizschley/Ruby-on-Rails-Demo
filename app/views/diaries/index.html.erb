@@ -1,3 +1,21 @@
 <h1>Diary Dashboard</h1>
 <p>Signed in as: <%= @user.email %></p>
+<%
+  one = "Tue<br>May<br>11<br>edit>"
+  two = "Wed<br>May<br>12<br>add>"
+  three = "Thur<br>May<br>13<br>add>"
+  four = "Fri<br>May<br>14<br>edit>"
+  five = "Sat<br>May<br>15<br>edit>"
+  six = "Sun<br>May<br>16<br>add>"
+  seven = "Mon<br>May<br>17<br>edit>"
+%>
 <%= button_to "Logout", destroy_user_session_path, method: :delete  %>
+<div class="container diary_buttons">
+  <a href="something" class="diary_btn btn_edit"><%= one.html_safe %></a>
+  <a href="something" class="diary_btn btn_add"><%= two.html_safe %></a>
+  <a href="something" class="diary_btn btn_add"><%= three.html_safe %></a>
+  <a href="something" class="diary_btn btn_edit"><%= four.html_safe %></a>
+  <a href="something" class="diary_btn btn_edit"><%= five.html_safe %></a>
+  <a href="something" class="diary_btn btn_add"><%= six.html_safe %></a>
+  <a href="something" class="diary_btn btn_edit"><%= seven.html_safe %></a>
+</div>

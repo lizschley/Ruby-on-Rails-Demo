@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+div.diary_buttons {
+  margin: 15px;
+}
+
+a.diary_btn {
+  margin: 15px;
+  text-align: center;
+}
+
+a.btn_edit {
+  background-color: #F7DC6F
+}
+
+a.btn_add {
+  background-color: #E5E7E9
+}
