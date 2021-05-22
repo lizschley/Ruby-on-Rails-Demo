@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_14_145821) do
+ActiveRecord::Schema.define(version: 2021_05_22_143827) do
+
+  create_table "diaries", force: :cascade do |t|
+    t.string "date_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "asleep_at", null: false
+    t.datetime "awake_at", null: false
+    t.integer "rating", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index "\"uuid\", \"date_id\"", name: "index_diaries_on_uuid_and_date_id", unique: true
+    t.index ["user_id"], name: "index_diaries_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "uuid", null: false
@@ -21,8 +33,10 @@ ActiveRecord::Schema.define(version: 2021_05_14_145821) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "time_zone", default: "Eastern Time (US & Canada)"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "diaries", "users"
 end
