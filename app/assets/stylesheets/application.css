@@ -27,9 +27,10 @@ a.diary {
   color:#17202A;
 }
 
-span.diary {
-  padding-top: 5px;
+span.day_int {
+  padding: 5px;
   font: bold 20px Arial;
+  display: inline-block;
 }
 
 a.btn_edit {

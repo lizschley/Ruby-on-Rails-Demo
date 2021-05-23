@@ -1,21 +1,8 @@
 <h1>Diary Dashboard</h1>
 <p>Signed in as: <%= @user.email %></p>
-<%
-  one = "Tue<br>May<br><span class='diary'>11</span><br>edit >"
-  two = "Wed<br>May<br><span class='diary'>12</span><br>add >"
-  three = "Thu<br>May<br><span class='diary'>13</span><br>add >"
-  four = "Fri<br>May<br><span class='diary'>14</span><br>edit >"
-  five = "Sat<br>May<br><span class='diary'>15</span><br>edit >"
-  six = "Sun<br>May<br><span class='diary'>16</span><br>add >"
-  seven = "Mon<br>May<br><span class='diary'>17</span><br>edit >"
-%>
 <%= button_to "Logout", destroy_user_session_path, method: :delete  %>
 <div class="container diary_buttons">
-  <a href="#" class="button diary btn_edit"><%= one.html_safe %></a>
-  <a href="#" class="button diary btn_add"><%= two.html_safe %></a>
-  <a href="#" class="button diary btn_add"><%= three.html_safe %></a>
-  <a href="#" class="button diary btn_edit"><%= four.html_safe %></a>
-  <a href="#" class="button diary btn_edit"><%= five.html_safe %></a>
-  <a href="#" class="button diary btn_add"><%= six.html_safe %></a>
-  <a href="#" class="button diary btn_edit"><%= seven.html_safe %></a>
+  <% @buttons.each do |btn|%>
+    <%=btn.html_safe%>
+  <% end %>
 </div>

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateDiaries < ActiveRecord::Migration[6.0]
   def change
     create_table :diaries do |t|
@@ -8,7 +10,7 @@ class CreateDiaries < ActiveRecord::Migration[6.0]
       t.integer :rating, null: false
 
       t.timestamps
-      t.index [:uuid, :date_id], unique: true
+      t.index %i[uuid date_id], unique: true
     end
   end
 end
