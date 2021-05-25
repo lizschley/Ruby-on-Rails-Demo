@@ -20,14 +20,14 @@ Token authentication implemented for three methods, all in the diaries controlle
 3. update - not implemented yet
 
 The API methods can only be called using Faraday (or postman or whatever)
-* app/workflows/faraday_for_diaries.rb
-* Usage
-** First go to folder and manually update the params
-** go to console
-** >>> rails c
->>> FaradayForDiaries.create_diary
-** or
->>> FaradayForDiaries.get_diary
+- app/workflows/faraday_for_diaries.rb
+** Usage **
+- First go to folder and manually update the params
+- go to console
+` >>> rails c `
+` FaradayForDiaries.create_diary `
+- or
+` FaradayForDiaries.get_diary`
 
 If you create a new diary entry for a day in the past week, it will be reflected in the
 diary dashboard, if you click one, will pull in data from the show method (either defaults or the actual diary record)
