@@ -1,5 +1,5 @@
 # README
-**Sleep Diaries**
+***Sleep Diaries***
 
 - ruby 3.0.0p0 (2020-12-25 revision 95aff21468) [x86_64-darwin19]
 - Rails - 6.0.3.7
@@ -23,7 +23,7 @@ Implemented Token authentication for three methods, all in the diaries controlle
 The API methods can only be called using Faraday (or postman or whatever)
 - app/workflows/faraday_for_diaries.rb
 
-**Usage**
+***Usage***
 - First go to folder and manually update the params
 - go to console `>>> rails c `
 - run `>>> FaradayForDiaries.create_diary `
