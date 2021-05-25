@@ -61,7 +61,7 @@ class DiariesIndexHelper
   end
 
   def button_href(date_id)
-    "/#{@user.uuid}/#{date_id}"
+    "/diaries/#{@user.id}/#{date_id}"
   end
 
   def button_text(found, new_date)
