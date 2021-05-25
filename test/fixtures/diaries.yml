@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_id: MyString
+  user: one
+  asleep_at: 2021-05-22 08:53:29
+  awake_at: 2021-05-22 08:53:29
+  rating: 1
+
+two:
+  date_id: MyString
+  user: two
+  asleep_at: 2021-05-22 08:53:29
+  awake_at: 2021-05-22 08:53:29
+  rating: 1

@@ -13,3 +13,30 @@
  *= require_tree .
  *= require_self
  */
+div.diary_buttons {
+  margin: 15px;
+}
+
+a.diary {
+  margin: 2px;
+  padding: 10px 15px 10px 15px;
+  text-align: center;
+  display: inline-block;
+  font: 15px Arial;
+  text-decoration: none;
+  color:#17202A;
+}
+
+span.day_int {
+  padding: 5px;
+  font: bold 20px Arial;
+  display: inline-block;
+}
+
+a.btn_edit {
+  background-color: #F7DC6F
+}
+
+a.btn_add {
+  background-color: #E5E7E9
+}
