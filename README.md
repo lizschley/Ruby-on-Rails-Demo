@@ -12,6 +12,12 @@ After pulling:
 1. bundle install
 2. rake db:migrate
 
+***Routes***
+- show_diary GET http://domain/diaries/:user_id/:date_id(.:format) --> diaries#show
+- show_with_token GET http://domain/:uuid/:date_id(.:format) --> diaries#show_with_token
+- update_diary PUT http://domain/diaries(.:format) --> diaries#update
+- create_diary POST http://domain/diaries(.:format) --> diaries#create
+
 Devise authentication works for index and show methods
 
 Implemented Token authentication for three methods, all in the diaries controller:
@@ -23,7 +29,7 @@ Implemented Token authentication for three methods, all in the diaries controlle
 The API methods can only be called using Faraday (or postman or whatever)
 - app/workflows/faraday_for_diaries.rb
 
-***Usage***
+***Faraday Usage***
 - First go to folder and manually update the params
 - go to console `>>> rails c `
 - run `>>> FaradayForDiaries.create_diary `
