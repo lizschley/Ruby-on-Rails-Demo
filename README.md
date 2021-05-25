@@ -25,6 +25,7 @@ The API methods can only be called using Faraday (or postman or whatever)
 - First go to folder and manually update the params
 - go to console
 ` >>> rails c `
+
 ` FaradayForDiaries.create_diary `
 - or
 ` FaradayForDiaries.get_diary`
