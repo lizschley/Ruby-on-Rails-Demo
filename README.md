@@ -13,6 +13,7 @@ After pulling:
 2. rake db:migrate
 
 ***Routes***
+- index GET http://domain/ --> diaries#index
 - show_diary GET http://domain/diaries/:user_id/:date_id(.:format) --> diaries#show
 - show_with_token GET http://domain/:uuid/:date_id(.:format) --> diaries#show_with_token
 - update_diary PUT http://domain/diaries(.:format) --> diaries#update
