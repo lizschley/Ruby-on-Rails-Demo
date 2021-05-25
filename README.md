@@ -22,7 +22,7 @@ After pulling:
 Devise authentication works for index and show methods
 
 Implemented Token authentication for three methods, all in the diaries controller:
-(note - need both Token and Email in the header, see FaradayForDiaries for usage)
+(note - need both Token and Email in the header, see [FaradayForDiaries](https://github.com/lizschley/cbht/blob/develop/app/workflows/faraday_for_diaries.rb) for usage)
 1. show_with_token
 2. create - Note: ActiveRecord errors are not currently displayed. That would be an improvement.
 3. update - not implemented yet
