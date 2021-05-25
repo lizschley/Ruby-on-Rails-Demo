@@ -39,10 +39,10 @@ class FaradayForDiaries
   def self.create_params
     {
       user_id: 1,
-      date_id: '2021-05-20',
-      asleep_at: '2021-05-21 22:15:00 EDT',
-      awake_at: '2021-05-20 04:30:00 EDT',
-      rating: 3
+      date_id: '2021-05-18',
+      asleep_at: '2021-05-17 20:30:00 EDT',
+      awake_at: '2021-05-18 04:30:00 EDT',
+      rating: 4
     }
   end
 end
