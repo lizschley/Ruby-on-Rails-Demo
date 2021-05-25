@@ -68,7 +68,7 @@ class DiariesIndexHelper
     addedit = found ? 'edit >' : 'add >'
     text = new_date[:weekday]
     text += "<br>#{new_date[:month]}"
-    text += "<br>#{new_date[:day]}"
+    text += "<br><span class='day_int'>#{new_date[:day]}</span>"
     text += "<br>#{addedit}"
     text
   end

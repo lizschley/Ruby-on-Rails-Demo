@@ -1,25 +1,33 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ruby 3.0.0p0 (2020-12-25 revision 95aff21468) [x86_64-darwin19]
+Rails - 6.0.3.7
+Node - v14.13.1
 
-Things you may want to cover:
+New gem: simple_token_authentication
+(also rubocop and pry, but that was just nostalgia)
 
-* Ruby version
+After pulling:
+1. bundle install
+2. rake db:migrate
 
-* System dependencies
+Devise authentication works for index and show methods
 
-* Configuration
+Token authentication implemented for three methods, all in the diaries controller:
+(note - you need to pass both Token and Email, see FaradayForDiaries for usage)
+1. show_with_token
+2. create
+3. update - but actually update is not implemented
 
-* Database creation
+The API methods can only be called using Faraday (or postman or whatever)
+* app/workflows/faraday_for_diaries.rb
+* Usage
+** First go to folder and manually update the params
+** go to console
+** >>> rails c
+>>> FaradayForDiaries.create_diary
+** or
+>>> FaradayForDiaries.get_diary
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# cbht
+If you create a new diary entry for a day in the past week, it will be reflected in the
+diary dashboard
