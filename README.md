@@ -17,7 +17,7 @@ Devise authentication works for index and show methods
 Implemented Token authentication for three methods, all in the diaries controller:
 (note - need both Token and Email in the header, see FaradayForDiaries for usage)
 1. show_with_token
-2. create
+2. create - Note: ActiveRecord errors are not currently displayed. That would be an improvement.
 3. update - not implemented yet
 
 The API methods can only be called using Faraday (or postman or whatever)
