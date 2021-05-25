@@ -18,33 +18,49 @@ class DiariesController < ApplicationController
   # GET /:id/:date_id (YYYY-MM-DD string format)
   def show
     diary = show_one_diary(@user, params[:date_id])
-    render(json: diary.to_json, status: 400) and return if diary.key?(:error)
+    if diary.is_a? Hash and diary.key?(:error)
+      render(json: diary.to_json, status: 400)
+      return
+    end
     render(json: diary.to_json, status: 200)
   end
 
   # GET /:uuid/:date_id (YYYY-MM-DD string format)
   def show_with_token
-   if @user.nil?
-      render(json: 'unauthenticated', status:401)
+    if @user.nil?
+      render(json: {error: 'unauthenticated'}, status:401)
       return
     end
     diary = show_one_diary(@user, params[:date_id])
-    render(json: diary.to_json, status: 400) and return if diary.key?(:error)
+    if diary.is_a? Hash and diary.key?(:error)
+      render(json: diary.to_json, status: 400)
+      return
+    end
     render(json: diary.to_json, status: 200)
   end
 
   # PUT /diaries
-  def update; end
+  def update
+    if @user.nil?
+      render(json: {error: 'unauthenticated'}, status:401)
+      return
+    end
+    render(json: {status: 'not yet implemented'}, status: 404)
+  end
 
   # POST /diaries
   def create
+    if @user.nil?
+      render(json: {error: 'unauthenticated'}, status:401)
+      return
+    end
+
     @diary = Diary.new(allowed_params)
 
     if @diary.save
-      render (json: {status: successfully created}.to_json, status: 201)
-    else
-      render(json: {error: @diary.errors}.to_json, status: 400)
+      render(json: {status: 'successfully created'}, status: 201) and return
     end
+    render(json: {error: @diary.errors}.to_json, status: 400)
   end
 
   private

@@ -29,24 +29,21 @@ class FaradayForDiaries
   end
 
   def self.get_diary
-    url = 'http://127.0.0.1:3000/4ccaa214-326a-4993-b520-9a3019afb13d/2021-05-20'
+    url = 'http://127.0.0.1:3000/4ccaa214-326a-4993-b520-9a3019afb13d/2021-05-22'
     response = Faraday.get(url, {},
       {'API-TOKEN' => 'DVrgvayzMwD2fbyujmyo', 'X-User-Email' => 'lizschley@gmail.com'})
   end
 
-  def update_params
-    {
-    }
-  end
+  def update_params; end
 
   # this is used to make manual entry easier
   def self.create_params
     {
       user_id: 1,
-      date_id: '2021-05-24',
-      asleep_at: '2021-05-22 21:15:00 EDT',
-      awake_at: '2021-05-23 05:12:00 EDT',
-      rating: 5
+      date_id: '2021-05-20',
+      asleep_at: '2021-05-21 22:15:00 EDT',
+      awake_at: '2021-05-20 04:30:00 EDT',
+      rating: 3
     }
   end
 end
