@@ -24,8 +24,8 @@ The API methods can only be called using Faraday (or postman or whatever)
 ** Usage **
 - First go to folder and manually update the params
 - go to console` >>> rails c `
-- run ` FaradayForDiaries.create_diary `
-- or` FaradayForDiaries.get_diary`
+- run `>>> FaradayForDiaries.create_diary `
+- or` >>> FaradayForDiaries.get_diary`
 
 If you create a new diary entry for a day in the past week, it will be reflected in the
 diary dashboard, if you click one, will pull in data from the show method (either defaults or the actual diary record)
