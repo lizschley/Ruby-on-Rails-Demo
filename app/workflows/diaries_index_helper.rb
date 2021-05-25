@@ -18,7 +18,7 @@ class DiariesIndexHelper
 
   def date_array
     temp = *(1..7).reverse_each
-    temp.each {|minus_days| add_date_to_array(minus_days)}
+    temp.each { |minus_days| add_date_to_array(minus_days) }
   end
 
   def add_date_to_array(minus_days)
@@ -31,7 +31,7 @@ class DiariesIndexHelper
   end
 
   def loop_through_dates_for_buttons
-    @dates.each {|dt| format_button(dt.in_time_zone(@user.time_zone))}
+    @dates.each { |dt| format_button(dt.in_time_zone(@user.time_zone)) }
   end
 
   def format_button(local_dt)
@@ -56,7 +56,7 @@ class DiariesIndexHelper
   def button(found, date_id, new_date)
     ret_btn = "<a href='#{button_href(date_id)}' "
     ret_btn += "class='#{button_classes(found)}'>"
-    ret_btn += button_text(found, new_date) + '</a>'
+    ret_btn += "#{button_text(found, new_date)}</a>"
     ret_btn
   end
 

@@ -6,8 +6,7 @@ class FaradayForDiaries
   include DiariesControllerHelper
 
   # params needs id and field to update
-  def self.update_diary(params=update_params)
-  end
+  def self.update_diary(params = update_params); end
 
   # params is expected to have the following:
   # date_id: 'YYYY-MM-DD' format and valid date
@@ -31,7 +30,7 @@ class FaradayForDiaries
   def self.get_diary
     url = 'http://127.0.0.1:3000/4ccaa214-326a-4993-b520-9a3019afb13d/2021-05-22'
     response = Faraday.get(url, {},
-      {'API-TOKEN' => 'DVrgvayzMwD2fbyujmyo', 'X-User-Email' => 'lizschley@gmail.com'})
+                           { 'API-TOKEN' => 'DVrgvayzMwD2fbyujmyo', 'X-User-Email' => 'lizschley@gmail.com' })
   end
 
   def update_params; end
