@@ -1,8 +1,8 @@
 # README
 
-ruby 3.0.0p0 (2020-12-25 revision 95aff21468) [x86_64-darwin19]
-Rails - 6.0.3.7
-Node - v14.13.1
+- ruby 3.0.0p0 (2020-12-25 revision 95aff21468) [x86_64-darwin19]
+- Rails - 6.0.3.7
+- Node - v14.13.1
 
 New gem: simple_token_authentication
 (also rubocop and pry, just because I like them)
