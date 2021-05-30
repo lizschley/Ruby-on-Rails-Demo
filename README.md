@@ -5,9 +5,6 @@
 - Rails - 6.0.3.7
 - Node - v14.13.1
 
-New gem: simple_token_authentication
-(also rubocop and pry, just because I like them)
-
 After pulling:
 1. bundle install
 2. rake db:migrate
